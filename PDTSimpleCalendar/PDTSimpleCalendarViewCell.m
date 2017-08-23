@@ -60,6 +60,7 @@ const CGFloat PDTSimpleCalendarCircleSize = 32.0f;
     //Test if the calendar is different than the current dateFormatter calendar property
     if (![dateFormatter.calendar isEqual:calendar]) {
         dateFormatter.calendar = calendar;
+        dateFormatter.locale = calendar.locale;
     }
     return [dateFormatter stringFromDate:date];
 }
